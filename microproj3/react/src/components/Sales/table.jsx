@@ -28,7 +28,7 @@ export class table extends Component {
         const {posts}=this.state;
         return (
             <div>
-                <div class="card-body table-responsive p-0" style={{height: "400px"}}>
+                <div class="card-body table-responsive p-0" style={{height: "100%"}}>
                                         <table id="tab" class="table table-striped table-head-fixed text-nowrap">
                                             <thead>
                                                 <tr>

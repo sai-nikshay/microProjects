@@ -13,11 +13,11 @@ export class Header extends Component {
                 {/* <!-- Left navbar links --> */}
                   <ul class="navbar-nav">
                     <li class="nav-item">
-                    <a class="nav-link" data-widget="pushmenu" href="/" role="button"> 
-                                                      <i class="fas fa-bars"></i></a>
+                    
                     </li>
-                    <li class="nav-item d-none d-sm-inline-block">
-                    <a href="/" class="nav-link">Home</a>
+                    <li class="nav-item d-none d-sm-inline-block"> 
+                    
+                    <a href="/" class="nav-link"><i class="fas fa-home"></i> Home</a>
                     </li>
                   </ul>
                 </nav>
@@ -38,19 +38,19 @@ export class Header extends Component {
                       <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <li class="nav-item">
                         <a href="/add_product" class="nav-link">
-                          <i class="nav-icon far fa-circle text-info"></i>
+                        <i class="fas fa-cart-arrow-down"></i>  
                           <p>Add Product</p>
                         </a>
                         </li>
                         <li class="nav-item">
                         <a href="/sales" class="nav-link">
-                          <i class="nav-icon far fa-circle text-info"></i>
+                        <i class="fas fa-scroll"></i>
                           <p class="text">Sales Details</p>
                         </a>
                         </li>
                         <li class="nav-item">
                         <a href="/update_sales" class="nav-link">
-                          <i class="nav-icon far fa-circle text-info"></i>
+                        <i class="fas fa-pencil-alt"></i>
                           <p class="text">Update Sales</p>
                         </a>
                         </li>

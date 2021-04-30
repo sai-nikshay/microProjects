@@ -7,6 +7,7 @@ import Addproduct from './components/Addproduct/Addproduct';
 import Sales from './components/Sales/Sales';
 import Editproduct from './components/Editproduct/Editproduct';
 import Updatesale from './components/Updatesales/Updatesale';
+import table from './components/Sales/table';
 function App() {
   return (
     <div className="App">
@@ -17,6 +18,7 @@ function App() {
         <Route exact path='/sales' component={Sales}/>
         <Route exact path='/edit/:id' component={Editproduct}/>
         <Route exact path='/update_sales' component={Updatesale}/>
+        <Route exact path='/table' component={table}/>
       </Switch>
     </div>
   );

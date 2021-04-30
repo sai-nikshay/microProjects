@@ -118,7 +118,7 @@ export class Home extends Component {
                                                                 <td class="project-actions text-right">
                                                                     <a class="btn btn-info btn-sm" href={"/edit/"+post.product_id}><i class="fas fa-pencil-alt"></i>Edit</a>
                                                                     &nbsp;
-                                                                        <button type="button" style={{backgroundColor:"red",borderColor:"black"}} onClick={this.delpro.bind(this,post.product_id)} class="btn btn-info btn-sm">Delete<i class="fas fa-trash"></i></button>
+                                                                        <button type="button" style={{backgroundColor:"red",borderColor:"gray"}} onClick={this.delpro.bind(this,post.product_id)} class="btn btn-info btn-sm"><i class="fas fa-trash"></i>Delete</button>
                                                                     
                                                                 </td>
                                                             </tr>

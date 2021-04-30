@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
-import Header from '../Header/Header'
+
+
 import '../../plugins/fontawesome-free/css/all.min.css';
 import '../../dist/css/adminlte.min.css';
 import './font.css';
-import Expire from '../Expire/Expire';
+
 import axios from 'axios'
-export class Sales extends Component {
+export class table extends Component {
     constructor(props) {
         super(props)
     
@@ -13,7 +14,6 @@ export class Sales extends Component {
              posts:[]
         }
     }
-
     componentDidMount(){
         axios.get('http://localhost:3001/sales')
         .then(res=>{
@@ -24,58 +24,11 @@ export class Sales extends Component {
             console.log(error)
         })
     }
-    createPDF=()=> {
-        console.log("in generate pdf")
-       
-
-        // CREATE A WINDOW OBJECT.
-        var win = window.open('/table', '_blank', 'height=700,width=700');
-
-       
-
-        win.document.close(); 	// CLOSE THE CURRENT WINDOW.
-
-        win.print();    // PRINT THE CONTENTS.
-        
-    }
-    updatesales=()=> {
-        let path = `/update_sales`;
-        this.props.history.push(path);
-      }
     render() {
         const {posts}=this.state;
         return (
             <div>
-                <div class="hold-transition sidebar-mini">
-                    
-                    <div class="wrapper">
-                    <Expire delay="500">
-                    <div delay="2000" class="preloader flex-column justify-content-center align-items-center">
-                        <img class="animation__shake" src="https://seeklogo.com/images/T/The_Athlete_s_Foot-logo-94CB1D9B3F-seeklogo.com.png" alt="AdminLTELogo" height="60" width="60"/>
-                    </div>
-                    </Expire>
-                    
-                        <Header/>
-
-                        <div class="content-wrapper">
-                            
-                            <section class="content-header">
-                                <h1>Fashion Feet Inventory Management</h1>
-                            </section>
-                            
-                            <section class="content">
-                                <div class="card">
-                                    <div class="card-header">
-                                    <h3 class="card-title">Sales Details</h3>
-                                    
-                                    <div class="card-tools">
-                                        <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
-                                        <i class="fas fa-minus"></i></button>
-                                        <button type="button" class="btn btn-tool" data-card-widget="remove" data-toggle="tooltip" title="Remove">
-                                        <i class="fas fa-times"></i></button>
-                                    </div>
-                                    </div>
-                                    <div class="card-body table-responsive p-0" style={{height: "400px"}}>
+                <div class="card-body table-responsive p-0" style={{height: "400px"}}>
                                         <table id="tab" class="table table-striped table-head-fixed text-nowrap">
                                             <thead>
                                                 <tr>
@@ -112,20 +65,9 @@ export class Sales extends Component {
                                         </table>
                                             
                                     </div>
-                                </div>
-                            </section>
-                            <div  class="card-footer clearfix">
-                            <button class="btn btn-info" onClick={this.createPDF} style={{float:"left"}} ><i class="fas fa-download"></i> Generate PDF</button>
-                                <button type="button" style={{backgroundcolor:"#12A3B6",float:"left"}} onClick={this.updatesales} class="btn btn-primary float-right"><i class="fas fa-plus"></i> Sales Update</button>
-                                
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
             </div>
         )
     }
 }
 
-export default Sales
+export default table

@@ -43,7 +43,7 @@ export class Editproduct extends Component {
         .catch(error=>{
           console.log(error)
         })
-    
+        this.props.history.push('/');
   }
   componentDidMount(){
     axios.post('http://localhost:3001/editget',this.state)
